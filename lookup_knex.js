@@ -25,8 +25,9 @@ function printSummary(number, name) {
 knex.select().from('famous_people')
   .where('first_name', name)
   .asCallback(function(err, rows) {
-  if (err) return console.error(err);
-  printSummary(rows.length, name);
-  rows.forEach(printDetails);
-  knex.destroy();
-});
+    if (err) return console.error(err);
+    printSummary(rows.length, name);
+    rows.forEach(printDetails);
+    knex.destroy();
+  });
+
