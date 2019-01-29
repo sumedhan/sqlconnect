@@ -39,4 +39,4 @@ function printDetails(person, index) {
 function printSummary(number, name) {
   console.log(`Found ${number} person(s) by the name '${name}':`);
 }
-doQuery(client, query, values, printSummary,printDetails);
+doQuery(client, query, values, name, printSummary,printDetails);
